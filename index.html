@@ -28,10 +28,7 @@
 			name="description"
 			content="abbiamo deciso di concentrare i nostri sforzi in altri paesi, potete continuare la navigazione sul nostro sito in Australia"
 		/>
-		<meta
-			name="viewport"
-			content="width=device-width,minimum-scale=1,initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-		/>
+		<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
 		<style>
 			html,
@@ -63,7 +60,7 @@
 			.contentMsg {
 				height: 90vh;
 				width: 100vw;
-				background-image: url('https://assets.ilikesales.com/goodbyeimages/mission_dark.jpg');
+				background-image: url('https://assets.ilikesales.com/goodbyeimages/mission.png');
 				background-repeat: no-repeat;
 				background-position: 80% 0%;
 				background-size: cover;
@@ -81,12 +78,18 @@
 				line-height: 40px;
 			}
 
-			.au > img {
+			.redirect {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+			}
+
+			.flag > img {
 				width: 70px;
 				border-radius: 5px;
 				display: block;
-				margin: 20px auto;
 				border: 2px solid #fff;
+				margin-left: 20px;
 			}
 
 			a {
@@ -95,12 +98,13 @@
 			}
 
 			a:hover {
-				color: #8bc34a;
+				text-decoration: underline;
 			}
 
-			@media screen and (max-width: 320px) {
+			@media screen and (max-width: 400px) {
 				.contentMsg {
 					background-position: 85% 0%;
+					background-image: url('https://assets.ilikesales.com/goodbyeimages/mission_dark.jpg');
 				}
 
 				.msg {
@@ -112,6 +116,15 @@
 					box-sizing: border-box;
 					line-height: 35px;
 				}
+
+				.redirect {
+					flex-direction: column;
+				}
+
+				.flag > img {
+					margin-left: unset;
+					margin-top: 20px;
+				}
 			}
 		</style>
 	</head>
@@ -122,12 +135,14 @@
 		</div>
 		<div class="contentMsg">
 			<div class="msg">
-				Thank you all for participating in our project we have decided to continue our adventure in
-				australia you can browse our new site here:
-				<a href="https://www.ilikesales.com.au/">www.ilikesales.com.au</a>
-				<a class="au" href="https://www.ilikesales.com.au/"
-					><img src="https://assets.ilikesales.com/goodbyeimages/au.svg"
-				/></a>
+				<p>Thank you all for participating in our project!</p>
+				<p>We have decided to continue our adventure in Italy.</p>
+
+				<p>You can browse our site here:</p>
+				<p class="redirect">
+					<a href="https://www.promoqui.it">www.promoqui.it </a>
+					<a class="flag" href="www.promoqui.it"><img src="./img/it.svg" /></a>
+				</p>
 			</div>
 		</div>
 	</body>
